@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'src/assets/styles/spacing.scss';
+@import 'src/assets/styles/variables.scss';
+.col-class{
+    display: flex;
+    flex-direction: row;
+}
+.row-class{
+    display: flex;
+    flex-direction: column;
+}
+.nav-width{
+    width:20%;
+    border-right: 1px solid #5d5952;
+    height: 100vh;
+}
+.home-width{
+    width: 80%;
+    padding-left: 2rem;
+}
+.green-btn-class{
+    padding: 0.5rem 1rem;
+    width:8rem;
+    background-color: $dark_green_color;
+    color: white;
+    &:disabled{
+        opacity: 0.5;
+    }
+}
+.btn-class{
+    display: flex;;
+}
+.input-class{
+    width: 20rem;
+    padding: 0.5rem 0rem;
+}
+
