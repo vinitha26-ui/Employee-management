@@ -1,0 +1,92 @@
+<div class="edit-employee" class="row-class">
+    <div>
+    <h2>Edit Employee details</h2>
+</div>
+    <div>
+        <form [formGroup]="form" (ngSubmit)="saveData()">
+
+            <div class="m-b-xs form-class" >
+                <label for="name">Name:</label>
+                <div class="row-class">
+                <input formControlName="name" type="text" id="name" name="name" class="input-class" />
+                <div
+                    *ngIf="this.form?.controls['name']?.errors && (this.form?.controls['name']?.touched || this.form?.controls['name']?.dirty)">Please
+                    enter a valid name</div>
+                </div>
+            </div>
+            <div class="m-b-xs form-class" >
+                <label for="designation">Designation:</label>
+                <div class="row-class">
+                <select formControlName="designation" type="text" id="designation" name="designation" class="input-class">
+                    <option *ngFor ="let option of designationList" [value]="option.code">{{option.description}}</option>
+                    </select>
+                <div
+                    *ngIf="this.form?.controls['designation']?.errors && (this.form?.controls['designation']?.touched || this.form?.controls['designation']?.dirty)">Please
+                select a designation</div>
+                </div>
+            </div>
+            <div class="m-b-xs form-class" >
+                <label for="experience">Experience:</label>
+                <div class="row-class">
+                <input formControlName="experience" type="text" id="experience" name="experience" class="input-class" />
+                <div
+                    *ngIf="this.form.controls['experience']?.errors && (this.form.controls['experience']?.touched || this.form.controls['experience']?.dirty)">Please
+                    enter a valid experience</div>
+                    </div>
+            </div>
+            <div class="m-b-xs form-class" >
+                <label for="yearOfJoining">Year of Joining:</label>
+                <div class="row-class">
+                <input formControlName="yearOfJoining" type="text" id="yearOfJoining" name="yearOfJoining" class="input-class" />
+                <div
+                    *ngIf="this.form.controls['yearOfJoining']?.errors && (this.form.controls['yearOfJoining']?.touched || this.form.controls['yearOfJoining']?.dirty)">Please
+                    enter a valid year of joining</div>
+                    </div>
+            </div>
+            <div class="m-b-xs form-class" >
+                <label for="currentTeam">Current Team:</label>
+                <div class="row-class">
+                <select formControlName="currentTeam" type="text" id="currentTeam" name="currentTeam" class="input-class">
+                    <option *ngFor ="let option of teamList" [value]="option.code">{{option.description}}</option>
+                    </select>
+                <div
+                    *ngIf="this.form?.controls['currentTeam']?.errors && (this.form?.controls['currentTeam']?.touched || this.form?.controls['currentTeam']?.dirty)">Please
+                select a current Team</div>
+                </div>
+            </div>
+            <div class="m-b-xs form-class" >
+                <label for="reportingManager">Reporting Manager:</label>
+                <div class="row-class">
+                <input formControlName="reportingManager" type="text" id="reportingManager" name="reportingManager" class="input-class" />
+                <div
+                    *ngIf="this.form.controls['reportingManager']?.errors && (this.form.controls['reportingManager']?.touched || this.form.controls['reportingManager']?.dirty)">Please
+                    enter a valid experience</div>
+                </div>
+            </div>
+            <div class="m-b-xs form-class" >
+                <label for="phoneNo">Phone Number:</label>
+                <div class="row-class">
+                <input formControlName="phoneNo" type="number" id="phoneNo" name="phoneNo" class="input-class" />
+                <div
+                    *ngIf="this.form.controls['phoneNo']?.errors && (this.form.controls['phoneNo']?.touched || this.form.controls['phoneNo']?.dirty)">Please
+                    enter a valid Phone Number</div>
+                    </div>
+            </div>
+            <div class="m-b-xs form-class" >
+                <label for="email">Email:</label>
+                <div class="row-class">
+                <input formControlName="email" type="email" id="email" name="email" class="input-class" />
+                <div
+                    *ngIf="this.form.controls['email']?.errors && (this.form.controls['email']?.touched || this.form.controls['email']?.dirty)">Please
+                    enter a valid email</div>
+                    </div>
+            </div>
+           <div class=""btn-class>
+            <button type="submit" class="green-btn-class" [disabled]="!this.form.valid">
+                Save
+            </button>
+        </div>
+        </form>
+        </div>
+</div>
+

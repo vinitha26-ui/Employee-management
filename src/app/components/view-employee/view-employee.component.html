@@ -1,0 +1,87 @@
+<div class="view-employee-class" *ngIf="!hideEmployeeList">
+    <div *ngIf="searchSelected">
+        <input
+          type="search"
+          name="search" id="search" [(ngModel)]="search"
+          placeholder="Search by name or email" class="input-class" (keydown.enter)="searchedValue()"/>
+        <button class="green-btn-class m-l-xs" [disabled]="search?.trim() === ''" (click)="searchedValue()">Search</button>
+      </div>
+    <div class="btn-class">
+        <button class="green-btn-class m-b-xs place-end" (click)="addEmployee()">Add Employee</button>
+    </div>
+    <div>
+        <div *ngIf="filterSelected" class="col-class m-b-xs">
+            <div class="m-b-xss m-l-xxs"  *ngFor="let option of filterOptions; let i =index;">
+                <label for="currentTeam">{{option.title}}</label>
+                <select   (change)="onChange(selectedValue[i],i)" 
+                [(ngModel)]="selectedValue[i]" 
+                [name]="selectedValue[i]">
+                    <option *ngFor ="let item of option.options" [value]="item.code"  >{{item.description}}</option>
+                    </select>
+            
+            </div>
+            <div class="col-class">
+        <button class="btn-class m-l-xs" (click)="onClear()">Clear</button>
+        <button class="btn-class m-l-xs" (click)="onSubmit()">Submit</button>
+
+            </div>
+        </div>
+    <div class="card-class col-class" *ngFor="let employee of employeeList; let i =index;">
+     <div class="col-class emp-row-class">
+        <div>image</div>
+        <div class="row-class">
+            <div class="m-l-xs">{{employee.name}}</div>
+            <div class="m-l-xs">{{employee.designation.description}}</div>
+        </div>
+        <div class="col-class place-end">
+            <span><img class="img-class" (click)="editEmployee(employee,i)" src="assets/images/edit.svg" alt="Edit"></span>
+            <span (click)="deleteEmployee(i)"><img class="big-img-class m-l-xs" src="assets/images/delete.svg" alt="Delete"></span>
+        </div>
+     </div>
+     <div class="row-class">
+        <div class="col-class emp-row-class">
+        <div class="col-class">
+            <span>{{employee.rating}}</span>
+        <span class="m-l-xxs"> Rating</span>
+    </div>
+    <div class="stars m-l-xs" style="--rating: {{employee.rating}};" aria-label="Rating">
+    </div>
+     </div>
+     <div class="col-class emp-row-class">
+        <div class="col-class">
+            <div>Experience:</div>
+            <div class="m-l-xxs">{{employee.experience}}</div>
+        </div>
+        <div class="col-class m-l-xxs">
+            <div>Year of Joining:</div>
+            <div class="m-l-xxs">{{employee.yearOfJoining}}</div>
+        </div>
+
+     </div>
+     <div class="col-class emp-row-class">
+        <div>Current Team:</div>
+        <div class="m-l-xxs">{{employee.currentTeam.description}}</div>
+     </div>
+     <div class="col-class emp-row-class">
+        <div>Reporting Manager:</div>
+        <div class="m-l-xxs">{{employee.reportingManager}}</div>
+     </div>
+     <div class="col-class emp-row-class">
+        <div class="col-class">
+            <span><img class="img-class" src="assets/images/phone.svg" alt="Phone Number"></span>
+            <span class="m-l-xxs">{{employee.phoneNo}}</span>
+        </div>
+        <div class="col-class">
+            <span><img class="img-class m-l-xs" src="assets/images/email.svg" alt="Email"></span>
+            <span class="m-l-xxs">{{employee.email}}</span>
+        </div>
+     </div>
+
+</div>
+</div>
+</div>
+</div>
+
+<div *ngIf="hideEmployeeList">
+    <router-outlet></router-outlet>
+</div>

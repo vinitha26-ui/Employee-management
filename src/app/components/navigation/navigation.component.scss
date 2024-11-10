@@ -1,0 +1,15 @@
+@import 'src/assets/styles/variables.scss';
+.navigation-class{
+.green-text-class{
+    color: $green_color;
+    padding: 0.5rem 0;
+    cursor: pointer;
+}
+.nav-padding-class{
+    padding: 1rem;
+}
+.selected-nav{
+    background-color: #E5E4E2;
+    color: $dark_green-color;
+}
+}

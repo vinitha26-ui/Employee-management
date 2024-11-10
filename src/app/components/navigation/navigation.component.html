@@ -1,0 +1,9 @@
+<div class="row-class navigation-class">
+    <div>
+    <h2>Infrrd</h2>
+</div>
+    <div class="row-class" *ngFor="let item of navigationItems">
+    <div class="green-text-class" [ngClass]="{'selected-nav':item.selected}" (click)="navSelected(item.title)">{{item?.title}}</div>
+</div>
+
+</div>
