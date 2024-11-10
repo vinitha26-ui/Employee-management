@@ -1,0 +1,106 @@
+{
+    "employeeList":[
+        {
+            "name":"Andrew Bridgen",
+            "designation":{
+                "code":"SSD",
+                "description":"Senior Software Developer"
+            },
+            "rating":"3.5",
+            "experience":"5.8",
+            "yearOfJoining":"2017",
+            "currentTeam":{
+                "code":"OCBC",
+                "description":"OCBC Singapore"
+            },
+            "reportingManager":"Lalit Agarwal",
+            "phoneNo":"7406559241",
+            "email":"andrew@infrrd.ai"
+        },
+        {
+            "name":"Bob Bridgen",
+            "designation":{
+                "code":"SSD",
+                "description":"Senior Software Developer"
+            },
+            "rating":"3.5",
+            "experience":"5.8",
+            "yearOfJoining":"2017", 
+            "currentTeam":{
+                "code":"OCBC",
+                "description":"OCBC Singapore"
+            }, 
+            "reportingManager":"Lalit Agarwal",
+            "phoneNo":"7406559241",
+            "email":"bob@infrrd.ai"
+        },
+        {
+            "name":"Andrew Bridgen",
+            "designation":{
+                "code":"SSD",
+                "description":"Senior Software Developer"
+            },
+            "rating":"3.5",
+            "experience":"5.8",
+            "yearOfJoining":"2017",
+            "currentTeam":{
+                "code":"OCBC",
+                "description":"OCBC Singapore"
+            },
+            "reportingManager":"Lalit Agarwal",
+            "phoneNo":"7406559241",
+            "email":"andrew@infrrd.ai"
+        },
+        {
+            "name":"Andrew Bridgen",
+            "designation":{
+                "code":"SSD",
+                "description":"Senior Software Developer"
+            },
+            "rating":"3.5",
+            "experience":"5.8",
+            "yearOfJoining":"2017",
+            "currentTeam":{
+                "code":"OCBC",
+                "description":"OCBC Singapore"
+            },
+            "reportingManager":"Lalit Agarwal",
+            "phoneNo":"7406559241",
+            "email":"andrew@infrrd.ai"
+        },
+        {
+            "name":"Andrew Bridgen",
+            "designation":{
+                "code":"SSD",
+                "description":"Senior Software Developer"
+            },
+            "rating":"3.5",
+            "experience":"5.8",
+            "yearOfJoining":"2017",
+            "currentTeam":{
+                "code":"OCBC",
+                "description":"OCBC Singapore"
+            },
+            "reportingManager":"Lalit Agarwal",
+            "phoneNo":"7406559241",
+            "email":"andrew@infrrd.ai"
+        },
+        {
+            "name":"Andrew Bridgen",
+            "designation":{
+                "code":"SSD",
+                "description":"Senior Software Developer"
+            },
+            "rating":"3.5",
+            "experience":"5.8",
+            "yearOfJoining":"2017",
+            "currentTeam":{
+                "code":"OCBC",
+                "description":"OCBC Singapore"
+            },
+            "reportingManager":"Lalit Agarwal",
+            "phoneNo":"7406559241",
+            "email":"andrew@infrrd.ai"
+        }
+    ]
+}
