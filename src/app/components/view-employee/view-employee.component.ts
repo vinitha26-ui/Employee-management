@@ -91,6 +91,7 @@ export class ViewEmployeeComponent implements OnInit {
     this.searchSelected = val === 'Search' ? true : false;
     this.filterSelected = val === 'Filter' ? true :  false;
       this.hideEmployeeList = false;
+      this.employeeList = this.employeeListData;
    });
     this.employeeList = this.employeeService.getEmployeeList() ? this.employeeService.getEmployeeList():[];
  this.employeeListData = this.employeeList;
